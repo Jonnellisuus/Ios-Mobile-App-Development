@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LandmarkDetail: View {
     @EnvironmentObject var modelData: ModelData
+    @State private var showingAlert = false
     var landmark: Landmark
     
     var landmarkIndex: Int {
@@ -25,6 +26,17 @@ struct LandmarkDetail: View {
             CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
+            
+            Button(action: {
+            self.showingAlert = true
+            }) {
+            Image(systemName: "trash")
+                .font(.largeTitle)
+                .foregroundColor(Color.red)
+            }
+            .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Delete landmark"), message: Text("Are you sure you want to delete this landmark?"), primaryButton: .default(Text("Cancel")), secondaryButton: .destructive(Text("Delete")))
+                }
 
             VStack(alignment: .leading) {
                 HStack {
@@ -53,6 +65,14 @@ struct LandmarkDetail: View {
         .navigationTitle(landmark.name)
         .navigationBarTitleDisplayMode(.inline)
     }
+    
+    /*
+     Function does not remove a landmark. Function needs to be called. How?
+     
+    func deleteLandmark(at offsets: IndexSet) {
+        modelData.landmarks.remove(atOffsets: offsets)
+    }
+    */
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {

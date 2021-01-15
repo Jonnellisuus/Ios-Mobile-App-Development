@@ -16,6 +16,18 @@ struct CircleImage: View {
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 7)
+            .contextMenu {
+            Button(action: {
+            }) {
+            Text("Delete")
+            Image(systemName: "trash")
+            }
+            Button(action: {
+            }) {
+            Text("ADD")
+            Image(systemName: "plus")
+                   }
+                }
     }
 }
 
