@@ -47,7 +47,15 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkList()
-            .environmentObject(ModelData())
+        Group {
+            LandmarkList()
+                .environmentObject(ModelData())
+            LandmarkList()
+                .environmentObject(ModelData())
+                .environment(\.colorScheme, .dark)
+            LandmarkList()
+                .environmentObject(ModelData())
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
+        }
     }
 }

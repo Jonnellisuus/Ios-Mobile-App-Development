@@ -14,7 +14,12 @@ struct LandmarkDetail: View {
     var landmark: Landmark
     
     var landmarkIndex: Int {
-        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+        guard let index = modelData.landmarks.firstIndex(where: {
+            return $0.id == landmark.id
+        }) else {
+            return 0
+        }
+        return index
     }
 
     var body: some View {
@@ -34,6 +39,7 @@ struct LandmarkDetail: View {
                 .font(.largeTitle)
                 .foregroundColor(Color.red)
             }
+            
             .alert(isPresented: $showingAlert) {
             Alert(title: Text("Delete landmark"), message: Text("Are you sure you want to delete this landmark?"), primaryButton: .default(Text("Cancel")), secondaryButton: .destructive(Text("Delete")))
                 }
@@ -63,16 +69,8 @@ struct LandmarkDetail: View {
             .padding()
         }
         .navigationTitle(landmark.name)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
-    
-    /*
-     Function does not remove a landmark. Function needs to be called. How?
-     
-    func deleteLandmark(at offsets: IndexSet) {
-        modelData.landmarks.remove(atOffsets: offsets)
-    }
-    */
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
