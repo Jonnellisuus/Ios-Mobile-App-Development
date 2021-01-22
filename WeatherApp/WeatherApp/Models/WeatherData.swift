@@ -4,37 +4,37 @@
 //
 //  Created by Jonne Kiukas on 22.1.2021.
 //
+// Note. When running this application on simulator use Iphone 12 Pro Max.
+// The responsiveness is the best on Iphone 12 Pro Max.
+//
 
 import Foundation
 
 struct WeatherData: Codable {
-    let name, base: String
+    let name: String
     let coord: Coord
     let main: Main
     let sys: Sys
-    let weather: [Weather]
+    // let weather: [Weather]
 }
 
 struct Coord: Codable {
-    let lon, lat: Double
+    let lon: Double
+    let lat: Double
 }
 
 struct Main: Codable {
-    let temp, tempMin, tempMax: Double
-    let pressure, humidity: Int
+    let temp: Double
+    let pressure: Int
+    let humidity: Int
 }
 
 struct Sys: Codable {
-    let id: Int
-    let type: Int
     let country: String
-    let sunrise: Int
-    let sunset: Int
 }
 
+/*
 struct Weather: Codable {
-    let id: Int
-    let main: String
     let description: String
-    let icon: String
 }
+*/

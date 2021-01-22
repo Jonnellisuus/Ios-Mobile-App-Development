@@ -18,25 +18,39 @@ struct CurrentWeather: View {
     var body: some View {
         VStack(alignment: .center) {
             Spacer()
-            Text("Enter a city above to get temperature")
+            Text("Current Temperature in")
+                .foregroundColor(.black)
+                .font(.system(size: 40))
+                .padding(.horizontal)
+            
+            Text("\(specificWeather?.name ?? "?")")
                 .foregroundColor(.black)
                 .font(.system(size: 50))
-                .padding(.horizontal)
-            Spacer()
             
+            Text("\(specificWeather?.sys.country ?? "?")")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+            
+            Text("\(specificWeather?.coord.lat ?? 0)")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+            
+            Text("\(specificWeather?.coord.lon ?? 0)")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+            
+            /*
+            How to display weahter discription?
+             
+            Text("\(specificWeather?.weather.description ?? "")")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+            */
+           
             Text("\(specificWeather?.main.temp.round ?? 0) °C")
                 .foregroundColor(.black)
                 .font(.system(size: 80))
-            
-            Text("\(specificWeather?.weather.description ?? "Unknown")")
-                .foregroundColor(.black)
-                .font(.system(size: 50))
-           
-            Text("\(specificWeather?.name ?? "Unknown")")
-                .foregroundColor(.black)
-                .font(.system(size: 50))
-                .padding(.bottom, 500.0)
-            Spacer()
+                .padding(.bottom, 400.0)
     }
         .background(
         Image("WheaterAppBackground")
