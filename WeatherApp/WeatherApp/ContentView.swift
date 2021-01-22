@@ -12,17 +12,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selected = 0
-    @ObservedObject var weather = CurrentWeatherViewModel()
+    @ObservedObject var specificWeather = CurrentWeatherViewModel()
     @State var city: String = ""
     
     var body: some View {
             VStack() {
                 TextField("Enter your city", text: $city, onCommit:  {
-                    self.weather.fetch(by: self.city)
+                    self.specificWeather.fetch(by: self.city)
                 }).padding(.horizontal)
                 
                 GeometryReader{ gr in
-                CurrentWeather(weather: self.weather.current, height: self.selected == 0 ? gr.size.height : gr.size.height * 0.50).animation(.easeInOut(duration: 0.5))
+                CurrentWeather(specificWeather: self.specificWeather.current, height: self.selected == 0 ? gr.size.height : gr.size.height * 0.50).animation(.easeInOut(duration: 0.5))
             }
         }
     }

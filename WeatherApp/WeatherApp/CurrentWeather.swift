@@ -12,7 +12,7 @@ import Foundation
 import SwiftUI
 
 struct CurrentWeather: View {
-    var weather: Weather?
+    var specificWeather: WeatherData?
     var height: CGFloat = 0
     
     var body: some View {
@@ -24,18 +24,22 @@ struct CurrentWeather: View {
                 .padding(.horizontal)
             Spacer()
             
-            Text("\(weather?.main.temp.round ?? 0) °C")
+            Text("\(specificWeather?.main.temp.round ?? 0) °C")
                 .foregroundColor(.black)
                 .font(.system(size: 80))
+            
+            Text("\(specificWeather?.weather.description ?? "Unknown")")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
            
-            Text("\(weather?.name ?? "Unknown")")
+            Text("\(specificWeather?.name ?? "Unknown")")
                 .foregroundColor(.black)
                 .font(.system(size: 50))
                 .padding(.bottom, 500.0)
             Spacer()
     }
         .background(
-        Image("light_background")
+        Image("WheaterAppBackground")
             .resizable()
             .scaledToFill()
             .clipped())

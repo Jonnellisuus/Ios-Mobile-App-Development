@@ -12,7 +12,7 @@ import Foundation
 import Combine
 
 final class CurrentWeatherViewModel: ObservableObject {
-    @Published var current: Weather?
+    @Published var current: WeatherData?
     
     init() {
         self.fetch()

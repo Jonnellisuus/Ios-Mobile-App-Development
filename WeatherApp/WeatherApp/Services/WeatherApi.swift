@@ -21,7 +21,7 @@ private var decoder: JSONDecoder {
 }
 
 class WeatherApi {
-    class func fetchCurrentWeather(by city: String, onSuccess: @escaping (Weather) -> Void){
+    class func fetchCurrentWeather(by city: String, onSuccess: @escaping (WeatherData) -> Void){
         let query = ["q": "\(city)", "appid": appid, "units": "metric"]
         guard let url = baseUrlForCurrentWeather.withQueries(queries: query) else {
             fatalError()
@@ -31,7 +31,7 @@ class WeatherApi {
             fatalError(err!.localizedDescription)
         }
         do {
-            let weather = try decoder.decode(Weather.self, from: data)
+            let weather = try decoder.decode(WeatherData.self, from: data)
             DispatchQueue.main.async {
                 onSuccess(weather)
             }
