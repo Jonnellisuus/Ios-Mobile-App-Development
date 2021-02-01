@@ -12,7 +12,7 @@ import Foundation
 import SwiftUI
 
 private let baseUrlForCurrentWeather = URL(string: "https://api.openweathermap.org/data/2.5/weather")!
-private let appid = "8d900e8989b6e4c01d558fd105430833"
+private let appid = "1adfcdb6b64b59edcd01d5fae37b8f86"
 
 private var decoder: JSONDecoder {
     let decode = JSONDecoder()
