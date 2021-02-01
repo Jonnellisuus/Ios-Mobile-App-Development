@@ -27,30 +27,35 @@ struct CurrentWeather: View {
                 .foregroundColor(.black)
                 .font(.system(size: 50))
             
-            Text("\(specificWeather?.sys.country ?? "?")")
+            Text("Lat: \(specificWeather?.coord.lat ?? 0)")
                 .foregroundColor(.black)
-                .font(.system(size: 50))
+                .font(.system(size: 45))
             
-            Text("\(specificWeather?.coord.lat ?? 0)")
+            Text("Lon: \(specificWeather?.coord.lon ?? 0)")
                 .foregroundColor(.black)
-                .font(.system(size: 50))
-            
-            Text("\(specificWeather?.coord.lon ?? 0)")
-                .foregroundColor(.black)
-                .font(.system(size: 50))
-            
-            /*
-            How to display weahter discription?
+                .font(.system(size: 45))
              
-            Text("\(specificWeather?.weather.description ?? "")")
+            Text("\(specificWeather?.weather[0].main ?? "?")")
                 .foregroundColor(.black)
                 .font(.system(size: 50))
-            */
-           
-            Text("\(specificWeather?.main.temp.round ?? 0) °C")
+            
+            Text("\(specificWeather?.weather[0].description ?? "?")")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+            
+            Text("\(specificWeather?.main.temp.round ?? 0)°C")
                 .foregroundColor(.black)
                 .font(.system(size: 80))
-                .padding(.bottom, 400.0)
+                
+            Text("Humidity: \(specificWeather?.main.humidity ?? 0)%")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+                
+            Text("Pressure: \(specificWeather?.main.humidity ?? 0) hPa")
+                .foregroundColor(.black)
+                .font(.system(size: 50))
+                .padding(.bottom, 200.0)
+            
     }
         .background(
         Image("WheaterAppBackground")

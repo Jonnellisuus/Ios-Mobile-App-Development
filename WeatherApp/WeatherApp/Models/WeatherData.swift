@@ -14,8 +14,7 @@ struct WeatherData: Codable {
     let name: String
     let coord: Coord
     let main: Main
-    let sys: Sys
-    // let weather: [Weather]
+    let weather: [Weather]
 }
 
 struct Coord: Codable {
@@ -29,12 +28,7 @@ struct Main: Codable {
     let humidity: Int
 }
 
-struct Sys: Codable {
-    let country: String
-}
-
-/*
 struct Weather: Codable {
+    let main: String
     let description: String
 }
-*/
