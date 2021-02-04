@@ -17,7 +17,7 @@ struct AppView: View {
             
             OrderView()
                 .tabItem { Image(systemName: "square.and.pencil")
-                    Text("Order ")
+                    Text("Order")
                 }
         }
     }

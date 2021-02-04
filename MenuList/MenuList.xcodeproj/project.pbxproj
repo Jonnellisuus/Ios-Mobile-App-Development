@@ -134,6 +134,7 @@
 		BCBD490725CC3E10007719EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD490625CC3E10007719EF /* SceneDelegate.swift */; };
 		BCBD490C25CC4216007719EF /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD490B25CC4216007719EF /* OrderView.swift */; };
 		BCBD491125CC44BB007719EF /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD491025CC44BB007719EF /* AppView.swift */; };
+		BCBD491625CC4C3C007719EF /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD491525CC4C3C007719EF /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,7 @@
 		BCBD490625CC3E10007719EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BCBD490B25CC4216007719EF /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		BCBD491025CC44BB007719EF /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		BCBD491525CC4C3C007719EF /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 				BCBD490625CC3E10007719EF /* SceneDelegate.swift */,
 				BCBD490B25CC4216007719EF /* OrderView.swift */,
 				BCBD491025CC44BB007719EF /* AppView.swift */,
+				BCBD491525CC4C3C007719EF /* CheckoutView.swift */,
 			);
 			path = MenuList;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBD490225CC3536007719EF /* ItemDetail.swift in Sources */,
+				BCBD491625CC4C3C007719EF /* CheckoutView.swift in Sources */,
 				BCBD48F525CC1E15007719EF /* Order.swift in Sources */,
 				BCBD47E425CC15DE007719EF /* ContentView.swift in Sources */,
 				BCBD47E225CC15DE007719EF /* MenuListApp.swift in Sources */,
