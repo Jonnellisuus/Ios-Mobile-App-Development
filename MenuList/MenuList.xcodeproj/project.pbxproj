@@ -129,6 +129,7 @@
 		BCBD48F625CC1E15007719EF /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = BCBD488225CC1E15007719EF /* menu.json */; };
 		BCBD48F725CC1E15007719EF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD488325CC1E15007719EF /* Helper.swift */; };
 		BCBD48F825CC1E15007719EF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD488425CC1E15007719EF /* Menu.swift */; };
+		BCBD48FD25CC270A007719EF /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD48FC25CC270A007719EF /* ItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +278,7 @@
 		BCBD488225CC1E15007719EF /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		BCBD488325CC1E15007719EF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		BCBD488425CC1E15007719EF /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		BCBD48FC25CC270A007719EF /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 				BCBD47E525CC15DF007719EF /* Assets.xcassets */,
 				BCBD47EA25CC15DF007719EF /* Info.plist */,
 				BCBD47E725CC15DF007719EF /* Preview Content */,
+				BCBD48FC25CC270A007719EF /* ItemRow.swift */,
 			);
 			path = MenuList;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				BCBD48F525CC1E15007719EF /* Order.swift in Sources */,
 				BCBD47E425CC15DE007719EF /* ContentView.swift in Sources */,
 				BCBD47E225CC15DE007719EF /* MenuListApp.swift in Sources */,
+				BCBD48FD25CC270A007719EF /* ItemRow.swift in Sources */,
 				BCBD48F725CC1E15007719EF /* Helper.swift in Sources */,
 				BCBD48F825CC1E15007719EF /* Menu.swift in Sources */,
 			);
