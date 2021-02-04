@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MenuListApp: App {
+    @StateObject private var order = Order()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView().environmentObject(order)
         }
     }
 }
