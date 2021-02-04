@@ -132,6 +132,7 @@
 		BCBD48FD25CC270A007719EF /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD48FC25CC270A007719EF /* ItemRow.swift */; };
 		BCBD490225CC3536007719EF /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD490125CC3536007719EF /* ItemDetail.swift */; };
 		BCBD490725CC3E10007719EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD490625CC3E10007719EF /* SceneDelegate.swift */; };
+		BCBD490C25CC4216007719EF /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD490B25CC4216007719EF /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +284,7 @@
 		BCBD48FC25CC270A007719EF /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		BCBD490125CC3536007719EF /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		BCBD490625CC3E10007719EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BCBD490B25CC4216007719EF /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 				BCBD48FC25CC270A007719EF /* ItemRow.swift */,
 				BCBD490125CC3536007719EF /* ItemDetail.swift */,
 				BCBD490625CC3E10007719EF /* SceneDelegate.swift */,
+				BCBD490B25CC4216007719EF /* OrderView.swift */,
 			);
 			path = MenuList;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				BCBD47E225CC15DE007719EF /* MenuListApp.swift in Sources */,
 				BCBD48FD25CC270A007719EF /* ItemRow.swift in Sources */,
 				BCBD48F725CC1E15007719EF /* Helper.swift in Sources */,
+				BCBD490C25CC4216007719EF /* OrderView.swift in Sources */,
 				BCBD48F825CC1E15007719EF /* Menu.swift in Sources */,
 				BCBD490725CC3E10007719EF /* SceneDelegate.swift in Sources */,
 			);
