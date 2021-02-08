@@ -43,7 +43,7 @@ struct CurrentWeather: View {
                 .foregroundColor(.black)
                 .font(.system(size: 50))
             
-            Text("\(specificWeather?.main.temp.round ?? 0)°C")
+            Text("\(specificWeather?.main.temp ?? 0, specifier: "%.2f")°C")
                 .foregroundColor(.black)
                 .font(.system(size: 80))
                 
