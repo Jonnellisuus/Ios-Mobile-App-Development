@@ -11,6 +11,25 @@
 import Foundation
 import SwiftUI
 
+extension String {
+    func load() -> UIImage {
+        do {
+            guard let url = URL(string: self)
+            
+            else {
+                return UIImage()
+            }
+            
+            let data: Data = try Data(contentsOf: url)
+            return UIImage(data: data) ?? UIImage()
+            
+        }catch{
+            
+        }
+        return UIImage()
+    }
+}
+
 struct CurrentWeather: View {
     var specificWeather: WeatherData?
     var height: CGFloat = 0
@@ -34,12 +53,10 @@ struct CurrentWeather: View {
             Text("Lon: \(specificWeather?.coord.lon ?? 0)")
                 .foregroundColor(.black)
                 .font(.system(size: 45))
-             
-            Text("\(specificWeather?.weather[0].main ?? "?")")
-                .foregroundColor(.black)
-                .font(.system(size: 50))
             
-            Text("\(specificWeather?.weather[0].description ?? "?")")
+            Image(uiImage: "https://openweathermap.org/img/wn/\(specificWeather?.weather.first?.icon ?? "Unkown")@2x.png".load())
+            
+            Text("\(specificWeather?.weather[0].main ?? "?")")
                 .foregroundColor(.black)
                 .font(.system(size: 50))
             
@@ -54,7 +71,7 @@ struct CurrentWeather: View {
             Text("Pressure: \(specificWeather?.main.humidity ?? 0) hPa")
                 .foregroundColor(.black)
                 .font(.system(size: 50))
-                .padding(.bottom, 200.0)
+                .padding(.bottom, 150.0)
             
     }
         .background(
