@@ -14,8 +14,24 @@ struct ContentView: View {
     @State private var newToDoItem = ""
     
     var body: some View {
-        Text("Hello world")
-            .padding()
+        NavigationView {
+            List {
+                Section(header: Text("What's next")) {
+                    HStack {
+                        TextField("New item", text: self.$newToDoItem)
+                        Button(action: {
+                            
+                        }){
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
+                        }
+                    }
+                }.font(.headline)
+            }
+        }
+        .navigationBarTitle(Text("My TODO list"))
+        .navigationBarItems(trailing: EditButton())
     }
 }
 
@@ -24,5 +40,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-// .environment()\.managedObjectContext, PersistenceController.preview.container.viewContext
