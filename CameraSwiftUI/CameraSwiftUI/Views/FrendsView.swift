@@ -17,11 +17,11 @@ struct Friend: Identifiable {
 
 struct FrendsView: View {
     var friends:[Friend] = [
-        Friend(name: "Kristina D.", mutualFriends: 350, avatar: "charleyrivers", poster: "charleyrivers"),
-        Friend(name: "David G.", mutualFriends: 1, avatar: "chilkoottrail", poster: "chilkoottrail"),
-        Friend(name: "Robert B.", mutualFriends: 22, avatar: "chincoteague", poster: "chincoteague"),
-        Friend(name: "Ruxi A.", mutualFriends: 10, avatar: "hiddenlake", poster: "hiddenlake"),
-        Friend(name: "George B.", mutualFriends: 2, avatar: "icybay", poster: "icybay"),
+        Friend(name: "Kristina D.", mutualFriends: 350, avatar: "charleyrivers", poster: "lakemcdonald"),
+        Friend(name: "David G.", mutualFriends: 1, avatar: "chilkoottrail", poster: "rainbowlake"),
+        Friend(name: "Robert B.", mutualFriends: 22, avatar: "chincoteague", poster: "twinlake"),
+        Friend(name: "Ruxi A.", mutualFriends: 10, avatar: "hiddenlake", poster: "silversalmoncreek"),
+        Friend(name: "George B.", mutualFriends: 2, avatar: "icybay", poster: "stmarylake"),
     ]
     
     var body: some View {

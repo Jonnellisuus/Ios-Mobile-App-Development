@@ -10,7 +10,7 @@ import SwiftUI
 struct FriendRow: View {
     var friend: Friend
     var body: some View {
-        NavigationLink(destination: Text(friend.name)) {
+        NavigationLink(destination: FriendDetailsView(friend: friend)) {
             HStack {
                 Image(friend.avatar)
                     .resizable()
@@ -65,7 +65,7 @@ struct FriendRow: View {
 
 struct FriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        FriendRow(friend: Friend(name: "Kristina D.", mutualFriends: 350, avatar: "charleyrivers", poster: "charleyrivers"))
+        FriendRow(friend: Friend(name: "Kristina D.", mutualFriends: 350, avatar: "charleyrivers", poster: "lakemcdonald"))
             .previewLayout(.sizeThatFits)
             .padding()
     }
