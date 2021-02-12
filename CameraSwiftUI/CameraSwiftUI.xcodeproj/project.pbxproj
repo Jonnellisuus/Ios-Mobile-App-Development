@@ -25,6 +25,7 @@
 		BC27F9BD25D6D184004E492C /* hiddenlake@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC27F9B325D6D184004E492C /* hiddenlake@2x.jpg */; };
 		BC27F9BE25D6D184004E492C /* rainbowlake@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC27F9B425D6D184004E492C /* rainbowlake@2x.jpg */; };
 		BC27F9BF25D6D184004E492C /* lakemcdonald@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC27F9B525D6D184004E492C /* lakemcdonald@2x.jpg */; };
+		BC27F9C425D6D9F6004E492C /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27F9C325D6D9F6004E492C /* FriendRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BC27F9B325D6D184004E492C /* hiddenlake@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hiddenlake@2x.jpg"; sourceTree = "<group>"; };
 		BC27F9B425D6D184004E492C /* rainbowlake@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rainbowlake@2x.jpg"; sourceTree = "<group>"; };
 		BC27F9B525D6D184004E492C /* lakemcdonald@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lakemcdonald@2x.jpg"; sourceTree = "<group>"; };
+		BC27F9C325D6D9F6004E492C /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				BC27F99D25D6C9B6004E492C /* FriendDetailsView.swift */,
 				BC27F9A625D6CF79004E492C /* FrendsView.swift */,
+				BC27F9C325D6D9F6004E492C /* FriendRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				BC27F9A725D6CF79004E492C /* FrendsView.swift in Sources */,
 				BC27F99E25D6C9B6004E492C /* FriendDetailsView.swift in Sources */,
+				BC27F9C425D6D9F6004E492C /* FriendRow.swift in Sources */,
 				BC27F97125D6C88F004E492C /* ContentView.swift in Sources */,
 				BC27F96F25D6C88F004E492C /* CameraSwiftUIApp.swift in Sources */,
 			);
