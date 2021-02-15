@@ -10,6 +10,8 @@ import SwiftUI
 struct FriendDetailsView: View {
     var friend: Friend
     
+    @State var showActionSheet = false
+    
     var body: some View {
         VStack {
             Image(friend.poster)
@@ -26,13 +28,24 @@ struct FriendDetailsView: View {
                     .aspectRatio(contentMode: .fill)
                     .clipped()
                     .clipShape(Circle())
-                    .frame(width: 120, height: 120)
+                    .frame(width: 160, height: 160)
+                    .overlay(
+                        CameraButtonView(showActionSheet: $showActionSheet)
+                            .offset(x: 50, y: 65)
+                    )
                 
                 Text(friend.name)
                     .fontWeight(.bold)
             }.offset(y: -70)
             Spacer()
         }
+        .actionSheet(isPresented: $showActionSheet, content: { () -> ActionSheet in ActionSheet(title: Text("Select Image"), message: Text("Please select an image from the image gallery or use the camera"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+        }),
+        ActionSheet.Button.default(Text("Photo Gallery"), action: {
+        }),
+        ActionSheet.Button.cancel()
+        ])
+        })
         .navigationBarTitle(Text(friend.name), displayMode: .inline)
     }
 }
