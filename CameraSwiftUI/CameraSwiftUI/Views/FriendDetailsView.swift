@@ -12,6 +12,7 @@ struct FriendDetailsView: View {
     
     @State var showImagePicker: Bool = false
     @State var showActionSheet = false
+    @State var image: Image?
     
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct FriendDetailsView: View {
                     .padding([.leading, .trailing])
                 
                 VStack {
-                    Image(friend.avatar)
+                    image?
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .clipped()
@@ -50,9 +51,11 @@ struct FriendDetailsView: View {
                 ])
             })
             if showImagePicker {
-                ImagePicker()
+                ImagePicker(isVisible: $showImagePicker, image: $image)
             }
-        }.navigationBarTitle(Text(friend.name), displayMode: .inline)
+        }
+        .onAppear { self.image = Image(self.friend.avatar)}
+        .navigationBarTitle(Text(friend.name), displayMode: .inline)
     }
 }
 
