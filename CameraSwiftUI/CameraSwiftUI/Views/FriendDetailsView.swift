@@ -13,6 +13,7 @@ struct FriendDetailsView: View {
     @State var showImagePicker: Bool = false
     @State var showActionSheet = false
     @State var image: Image?
+    @State var sourceType: Int = 0
     
     var body: some View {
         ZStack {
@@ -43,15 +44,18 @@ struct FriendDetailsView: View {
                 Spacer()
             }
             .actionSheet(isPresented: $showActionSheet, content: { () -> ActionSheet in ActionSheet(title: Text("Select Image"), message: Text("Please select an image from the image gallery or use the camera"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                self.sourceType = 0
+                self.showImagePicker.toggle()
                     }),
                     ActionSheet.Button.default(Text("Photo Gallery"), action: {
+                        self.sourceType = 1
                         self.showImagePicker.toggle()
                     }),
                     ActionSheet.Button.cancel()
                 ])
             })
             if showImagePicker {
-                ImagePicker(isVisible: $showImagePicker, image: $image)
+                ImagePicker(isVisible: $showImagePicker, image: $image, sourceType: sourceType)
             }
         }
         .onAppear { self.image = Image(self.friend.avatar)}
