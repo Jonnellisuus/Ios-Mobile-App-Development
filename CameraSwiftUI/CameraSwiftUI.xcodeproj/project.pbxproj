@@ -27,6 +27,7 @@
 		BC27F9BF25D6D184004E492C /* lakemcdonald@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC27F9B525D6D184004E492C /* lakemcdonald@2x.jpg */; };
 		BC27F9C425D6D9F6004E492C /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27F9C325D6D9F6004E492C /* FriendRow.swift */; };
 		BC724B5425DA98CD00D06700 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC724B5325DA98CD00D06700 /* CameraButtonView.swift */; };
+		BC724B5925DAA3F900D06700 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC724B5825DAA3F900D06700 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		BC27F9B525D6D184004E492C /* lakemcdonald@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lakemcdonald@2x.jpg"; sourceTree = "<group>"; };
 		BC27F9C325D6D9F6004E492C /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 		BC724B5325DA98CD00D06700 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
+		BC724B5825DAA3F900D06700 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				BC27F9A625D6CF79004E492C /* FrendsView.swift */,
 				BC27F9C325D6D9F6004E492C /* FriendRow.swift */,
 				BC724B5325DA98CD00D06700 /* CameraButtonView.swift */,
+				BC724B5825DAA3F900D06700 /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				BC27F9A725D6CF79004E492C /* FrendsView.swift in Sources */,
 				BC27F99E25D6C9B6004E492C /* FriendDetailsView.swift in Sources */,
 				BC27F9C425D6D9F6004E492C /* FriendRow.swift in Sources */,
+				BC724B5925DAA3F900D06700 /* ImagePicker.swift in Sources */,
 				BC724B5425DA98CD00D06700 /* CameraButtonView.swift in Sources */,
 				BC27F97125D6C88F004E492C /* ContentView.swift in Sources */,
 				BC27F96F25D6C88F004E492C /* CameraSwiftUIApp.swift in Sources */,
