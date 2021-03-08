@@ -39,65 +39,16 @@ var keys: [[Key]] = [
     ],
 ]
 
-struct ResultView: View {
-    var body: some View{
-        VStack{
-            Spacer()
-            HStack {
-                Spacer()
-                Text("0")
-                    .foregroundColor(Color.white)
-                    .font(.system(size: 90))
-                    .padding(.trailing, 30)
-            }
-        }
-    }
-}
-
-struct KeyView:View {
-    var key: Key
-    var body: some View {
-        let width = key.label == "0" ? UIScreen.main.bounds.width / 2 : UIScreen.main.bounds.width / 4
-        let height = UIScreen.main.bounds.width / 4
-        
-        return Button(action: {
-            print(self.key.label)
-        }){
-            RoundedRectangle(cornerRadius: 200)
-            .foregroundColor(key.color)
-            .frame(width: width - 10, height: height - 10, alignment: .center)
-            .overlay(
-                Text(key.label)
-                    .foregroundColor(key.labelColor)
-                    .font(.system(size: 40))
-            )
-        }
-    }
-}
-
-struct KeyPadView:View {
-    var body: some View{
-        VStack(spacing: 15) {
-            ForEach(0 ..< keys.count) { index in
-                HStack(spacing: 10) {
-                    ForEach(0 ..< keys[index].count) { innerIndex in
-                        KeyView(key: keys[index][innerIndex])
-                    }
-                }
-            }
-        }
-    }
-}
-
 struct ContentView: View {
+    @State var value = "0"
     var body: some View {
         ZStack{
             Rectangle()
                 .foregroundColor(Color.black)
                 .edgesIgnoringSafeArea(.all)
             VStack{
-                ResultView()
-                KeyPadView()
+                ResultView(value: value )
+                KeyPadView(value: $value)
             }
         }
     }
