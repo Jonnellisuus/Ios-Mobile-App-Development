@@ -13,6 +13,16 @@ enum KeyType {
     case Operator
 }
 
+var opertatorSymbols: [String: String] = [
+    "+": "plus",
+    "-": "minus",
+    "*": "multiply",
+    "/": "divide",
+    "+/-": "plus.slash.minus",
+    "%": "percent",
+    "=": "equal"
+]
+
 struct Key: Identifiable {
     var id: UUID = UUID()
     var label: String

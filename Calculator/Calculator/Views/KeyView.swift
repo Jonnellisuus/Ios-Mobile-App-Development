@@ -22,10 +22,18 @@ struct KeyView:View {
             .foregroundColor(key.color)
             .frame(width: width - 10, height: height - 10, alignment: .center)
             .overlay(
-                Text(key.label)
-                    .foregroundColor(key.labelColor)
-                    .font(.system(size: 40))
-                    .padding(.trailing, self.key.label == "0" ? width - 100 : 0)
+                Group {
+                    if (key.type == KeyType.Number) {
+                        Text(key.label)
+                            .foregroundColor(key.labelColor)
+                            .font(.system(size: 40))
+                            .padding(.trailing, self.key.label == "0" ? width - 112 : 0)
+                    } else {
+                        Image(systemName: opertatorSymbols[key.label] ?? "plus")
+                            .font(.system(size: 30))
+                            .foregroundColor(key.labelColor)
+                    }
+                }
             )
         }
     }
