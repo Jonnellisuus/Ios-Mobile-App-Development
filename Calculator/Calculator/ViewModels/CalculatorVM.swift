@@ -20,21 +20,34 @@ class CalculatorVM: ObservableObject {
         case 9:
             self.fontSize = 60
         default:
-            break
+            self.fontSize = 90
         }
     }
     
     func handleKeyPress(key: Key) {
+        switch key.label {
+        case "AC":
+            self.result = "0"
+        case "C":
+            self.result = "0"
+        default:
+            self.handelNumberSelection(label: key.label)
+        }
+        self.getFontSize(numberLength: self.result.count)
+    }
+    
+    func handelNumberSelection(label: String) {
         if (self.result.count == 0 || self.result.count < 9) {
-            self.result = result == "0" ? key.label : result + key.label
-            self.getFontSize(numberLength: self.result.count)
+            self.result = result == "0" ? label : result + label
         }
     }
     
     func getKeys() -> [[Key]] {
+        let cancel = self.result == "0" ? "AC" : "C"
+        
         return [
             [
-                Key(label: "AC", color: Color.gray, labelColor: Color.black),
+                Key(label: cancel, color: Color.gray, labelColor: Color.black),
                 Key(label: "+/-", color: Color.gray, labelColor: Color.black, type: KeyType.Operator),
                 Key(label: "%", color: Color.gray, labelColor: Color.black, type: KeyType.Operator),
                 Key(label: "/", color: Color.orange, labelColor: Color.white, type: KeyType.Operator),
