@@ -18,8 +18,9 @@ var opertatorSymbols: [String: String] = [
     "-": "minus",
     "*": "multiply",
     "/": "divide",
-    "+/-": "plus.slash.minus",
+    "x^": "potency",
     "%": "percent",
+    "√": "square.root",
     "=": "equal"
 ]
 

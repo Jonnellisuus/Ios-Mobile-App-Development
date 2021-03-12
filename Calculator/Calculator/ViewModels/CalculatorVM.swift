@@ -11,8 +11,20 @@ class CalculatorVM: ObservableObject {
     @Published var result: String = "0"
     @Published var fontSize = 90
     
-    func getFontSize(numberLength: Int) {
-        switch numberLength {
+    var numberFormatter: NumberFormatter = NumberFormatter()
+    var unformattedNumberValue: String = "0"
+    
+    var activeOperation: String = ""
+    var previousValue: Double = 0
+    
+    init() {
+        self.numberFormatter.usesGroupingSeparator = true
+        self.numberFormatter.numberStyle = .decimal
+        self.numberFormatter.locale = Locale.current
+    }
+    
+    func getFontSize() {
+        switch self.unformattedNumberValue.count {
         case 7:
             self.fontSize = 80
         case 8:
@@ -25,21 +37,82 @@ class CalculatorVM: ObservableObject {
     }
     
     func handleKeyPress(key: Key) {
-        switch key.label {
-        case "AC":
-            self.result = "0"
-        case "C":
-            self.result = "0"
-        default:
-            self.handelNumberSelection(label: key.label)
+        if key.type == KeyType.Operator {
+            self.handleOperationSelection(label: key.label)
+        } else {
+            switch key.label {
+            case "AC":
+                self.reset()
+            case "C":
+                self.cancel()
+            default:
+                self.handelNumberSelection(label: key.label)
+            }
         }
-        self.getFontSize(numberLength: self.result.count)
+    }
+    
+    func handleOperationSelection(label: String) {
+        var calculatedValue: Double = 0
+        let currentNumber: Double = Double(unformattedNumberValue) ?? 0
+        
+        if (activeOperation != "") {
+            switch activeOperation {
+            case "+":
+                calculatedValue = previousValue + currentNumber
+            case "-":
+                calculatedValue = previousValue - currentNumber
+            case "*":
+                calculatedValue = previousValue * currentNumber
+            case "/":
+                calculatedValue = previousValue > 0 ? previousValue / currentNumber : 0
+            case "%":
+                calculatedValue = previousValue / 100
+            case "x^":
+                calculatedValue = Double(pow(previousValue, currentNumber))
+            case "√":
+                calculatedValue = Double(sqrt(previousValue))
+            default:
+                calculatedValue = previousValue
+            }
+            previousValue = calculatedValue
+            result = formatNumber(value: String(calculatedValue))
+            
+        } else {
+            activeOperation = label
+            previousValue = previousValue > 0 ? previousValue : currentNumber
+        }
+        
+        activeOperation = label != "=" && label != "√" ? label : ""
+        unformattedNumberValue = "0"
     }
     
     func handelNumberSelection(label: String) {
-        if (self.result.count == 0 || self.result.count < 9) {
-            self.result = result == "0" ? label : result + label
+        if (self.unformattedNumberValue.count == 0 || self.unformattedNumberValue.count < 9) {
+            self.unformattedNumberValue = self.unformattedNumberValue == "0" ? label : self.unformattedNumberValue + label
+            self.result = self.formatNumber(value: self.unformattedNumberValue)
+            self.getFontSize()
         }
+    }
+    
+    func cancel() {
+        self.unformattedNumberValue = "0"
+        self.result = "0"
+    }
+    
+    func reset() {
+        self.cancel()
+        self.activeOperation = ""
+        self.previousValue = 0
+    }
+    
+    func formatNumber(value: String) -> String {
+        var formattedValue = value
+        
+        if let doubleValue = Double(formattedValue) {
+            formattedValue = self.numberFormatter.string(from: NSNumber(value: doubleValue)) ?? value
+        }
+        
+        return formattedValue
     }
     
     func getKeys() -> [[Key]] {
@@ -48,7 +121,7 @@ class CalculatorVM: ObservableObject {
         return [
             [
                 Key(label: cancel, color: Color.gray, labelColor: Color.black),
-                Key(label: "+/-", color: Color.gray, labelColor: Color.black, type: KeyType.Operator),
+                Key(label: "x^", color: Color.gray, labelColor: Color.black, type: KeyType.Operator),
                 Key(label: "%", color: Color.gray, labelColor: Color.black, type: KeyType.Operator),
                 Key(label: "/", color: Color.orange, labelColor: Color.white, type: KeyType.Operator),
             ],
@@ -72,7 +145,7 @@ class CalculatorVM: ObservableObject {
             ],
             [
                 Key(label: "0"),
-                Key(label: ","),
+                Key(label: "√"),
                 Key(label: "=", color: Color.orange, labelColor: Color.white, type: KeyType.Operator),
             ],
         ]
