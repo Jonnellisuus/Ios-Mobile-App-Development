@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LandmarkDetail: View {
     @EnvironmentObject var modelData: ModelData
+    @Environment(\.presentationMode) var presentationMode
     @State private var showingAlert = false
     var landmark: Landmark
     
@@ -41,7 +42,9 @@ struct LandmarkDetail: View {
             }
             
             .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Delete landmark"), message: Text("Are you sure you want to delete this landmark?"), primaryButton: .default(Text("Cancel")), secondaryButton: .destructive(Text("Delete")))
+                    Alert(title: Text("Delete landmark"), message: Text("Are you sure you want to delete this landmark?"), primaryButton: .default(Text("Cancel")), secondaryButton: .destructive(Text("Delete")) {
+                        self.onConfirmDelete()
+                    })
                 }
 
             VStack(alignment: .leading) {
@@ -70,6 +73,11 @@ struct LandmarkDetail: View {
         }
         .navigationTitle(landmark.name)
         .navigationBarTitleDisplayMode(.automatic)
+    }
+    
+    func onConfirmDelete() {
+        modelData.landmarks.remove(at: landmarkIndex)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
