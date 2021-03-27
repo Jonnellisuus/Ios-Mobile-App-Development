@@ -14,6 +14,8 @@
 		BC2CA0D225FF7D4400CA0344 /* DigiTrafficTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2CA0D125FF7D4400CA0344 /* DigiTrafficTests.swift */; };
 		BC2CA0DD25FF7D4400CA0344 /* DigiTrafficUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2CA0DC25FF7D4400CA0344 /* DigiTrafficUITests.swift */; };
 		BC2CA0EF25FF8FC400CA0344 /* DigiTrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2CA0EE25FF8FC400CA0344 /* DigiTrafficData.swift */; };
+		BC64C7EE260F67D9006C5EC2 /* DigiTrafficControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */; };
+		BC64C7F6260F6AD8006C5EC2 /* CameraData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C7F5260F6AD8006C5EC2 /* CameraData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BC2CA0DC25FF7D4400CA0344 /* DigiTrafficUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTrafficUITests.swift; sourceTree = "<group>"; };
 		BC2CA0DE25FF7D4400CA0344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2CA0EE25FF8FC400CA0344 /* DigiTrafficData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTrafficData.swift; sourceTree = "<group>"; };
+		BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTrafficControl.swift; sourceTree = "<group>"; };
+		BC64C7F5260F6AD8006C5EC2 /* CameraData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		BC2CA0BE25FF7D4100CA0344 /* DigiTraffic */ = {
 			isa = PBXGroup;
 			children = (
+				BC64C7EC260F669B006C5EC2 /* Others */,
 				BC2CA0ED25FF8F5B00CA0344 /* Data */,
 				BC2CA0BF25FF7D4100CA0344 /* DigiTrafficApp.swift */,
 				BC2CA0C125FF7D4100CA0344 /* ContentView.swift */,
@@ -137,8 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				BC2CA0EE25FF8FC400CA0344 /* DigiTrafficData.swift */,
+				BC64C7F5260F6AD8006C5EC2 /* CameraData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		BC64C7EC260F669B006C5EC2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC64C7EE260F67D9006C5EC2 /* DigiTrafficControl.swift in Sources */,
+				BC64C7F6260F6AD8006C5EC2 /* CameraData.swift in Sources */,
 				BC2CA0EF25FF8FC400CA0344 /* DigiTrafficData.swift in Sources */,
 				BC2CA0C225FF7D4100CA0344 /* ContentView.swift in Sources */,
 				BC2CA0C025FF7D4100CA0344 /* DigiTrafficApp.swift in Sources */,
