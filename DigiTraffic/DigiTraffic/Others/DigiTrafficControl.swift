@@ -112,7 +112,7 @@ class DigiTrafficControl: ObservableObject {
         }
     }
     
-    func fetchMunicipalities(certainProvince: String) {
+    func getMunicipality(certainProvince: String) {
         DispatchQueue.main.async {
             self.municipality.removeAll()
             for province in self.digiTrafficData {
