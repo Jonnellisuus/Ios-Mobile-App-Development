@@ -19,23 +19,18 @@ struct CameraStation: Codable, Identifiable {
     let cameraPresets: [CameraPreset]
 
     enum CodingKeys: String, CodingKey {
-        case id
+        case id, cameraPresets
         case roadStationID = "roadStationId"
         case nearestWeatherStationID = "nearestWeatherStationId"
-        case cameraPresets
     }
 }
 
 struct CameraPreset: Codable, Identifiable {
-    let id: String
+    let id, imageURL: String
     let presentationName: String?
-    let imageURL: String
-    let measuredTime: String?
 
     enum CodingKeys: String, CodingKey {
-        case id
-        case presentationName
+        case id, presentationName
         case imageURL = "imageUrl"
-        case measuredTime
     }
 }

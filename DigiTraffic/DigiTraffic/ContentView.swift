@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var digiTrafficControl: DigiTrafficControl
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        NavigationView {
+            List{
+                ForEach(digiTrafficControl.provinceArray, id: \.self) { province in NavigationLink(destination: MunicipalityView(province: province)) { Text(province)
+                    }
+                }
+            }
+            .onAppear {
+                self.digiTrafficControl.getDigiTrafficData()
+                self.digiTrafficControl.getCameraData()
+            }
+        }
     }
 }

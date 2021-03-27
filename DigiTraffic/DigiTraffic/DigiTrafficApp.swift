@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DigiTrafficApp: App {
+    var digiTrafficControl = DigiTrafficControl()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(digiTrafficControl)
         }
     }
 }

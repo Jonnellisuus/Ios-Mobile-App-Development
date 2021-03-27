@@ -26,8 +26,7 @@ struct Property: Decodable, Identifiable {
     let presets: [Preset]
 
     enum CodingKeys: String, CodingKey {
-        case id, municipality, province
-        case names, presets
+        case id, municipality, province, names, presets
     }
 }
 
@@ -37,5 +36,6 @@ struct Names: Decodable {
 
 struct Preset: Decodable, Identifiable {
     let id = UUID()
-    let presentationName, imageUrl: String?
+    let presentationName: String?
+    let imageUrl: String
 }

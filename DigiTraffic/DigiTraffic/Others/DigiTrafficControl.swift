@@ -9,10 +9,7 @@ import Foundation
 
 class DigiTrafficControl: ObservableObject {
     
-    // "https://tie.digitraffic.fi/api/v3/metadata/camera-stations"
     @Published var digiTrafficData = [Feature]()
-    
-    // "https://tie.digitraffic.fi/api/v1/data/camera-data"
     @Published var cameraStations = [CameraStation]()
     
     @Published var imageUrl: [String] = []

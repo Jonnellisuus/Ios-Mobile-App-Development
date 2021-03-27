@@ -16,6 +16,12 @@
 		BC2CA0EF25FF8FC400CA0344 /* DigiTrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2CA0EE25FF8FC400CA0344 /* DigiTrafficData.swift */; };
 		BC64C7EE260F67D9006C5EC2 /* DigiTrafficControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */; };
 		BC64C7F6260F6AD8006C5EC2 /* CameraData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C7F5260F6AD8006C5EC2 /* CameraData.swift */; };
+		BC64C7FC260F827E006C5EC2 /* MunicipalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C7FB260F827E006C5EC2 /* MunicipalityView.swift */; };
+		BC64C804260F836C006C5EC2 /* RoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C803260F836C006C5EC2 /* RoadView.swift */; };
+		BC64C80E260F8864006C5EC2 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C80D260F8864006C5EC2 /* CityView.swift */; };
+		BC64C813260F8BA6006C5EC2 /* PlaceholderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C812260F8BA6006C5EC2 /* PlaceholderImage.swift */; };
+		BC64C818260F8CB5006C5EC2 /* ImageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C817260F8CB5006C5EC2 /* ImageLoad.swift */; };
+		BC64C821260F8E21006C5EC2 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C820260F8E21006C5EC2 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		BC2CA0EE25FF8FC400CA0344 /* DigiTrafficData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTrafficData.swift; sourceTree = "<group>"; };
 		BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiTrafficControl.swift; sourceTree = "<group>"; };
 		BC64C7F5260F6AD8006C5EC2 /* CameraData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraData.swift; sourceTree = "<group>"; };
+		BC64C7FB260F827E006C5EC2 /* MunicipalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunicipalityView.swift; sourceTree = "<group>"; };
+		BC64C803260F836C006C5EC2 /* RoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadView.swift; sourceTree = "<group>"; };
+		BC64C80D260F8864006C5EC2 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		BC64C812260F8BA6006C5EC2 /* PlaceholderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImage.swift; sourceTree = "<group>"; };
+		BC64C817260F8CB5006C5EC2 /* ImageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoad.swift; sourceTree = "<group>"; };
+		BC64C820260F8E21006C5EC2 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		BC2CA0BE25FF7D4100CA0344 /* DigiTraffic */ = {
 			isa = PBXGroup;
 			children = (
+				BC64C7FA260F825D006C5EC2 /* Views */,
 				BC64C7EC260F669B006C5EC2 /* Others */,
 				BC2CA0ED25FF8F5B00CA0344 /* Data */,
 				BC2CA0BF25FF7D4100CA0344 /* DigiTrafficApp.swift */,
@@ -151,8 +164,21 @@
 			isa = PBXGroup;
 			children = (
 				BC64C7ED260F67D9006C5EC2 /* DigiTrafficControl.swift */,
+				BC64C812260F8BA6006C5EC2 /* PlaceholderImage.swift */,
+				BC64C817260F8CB5006C5EC2 /* ImageLoad.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		BC64C7FA260F825D006C5EC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC64C7FB260F827E006C5EC2 /* MunicipalityView.swift */,
+				BC64C803260F836C006C5EC2 /* RoadView.swift */,
+				BC64C80D260F8864006C5EC2 /* CityView.swift */,
+				BC64C820260F8E21006C5EC2 /* CameraView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +310,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC64C818260F8CB5006C5EC2 /* ImageLoad.swift in Sources */,
+				BC64C813260F8BA6006C5EC2 /* PlaceholderImage.swift in Sources */,
 				BC64C7EE260F67D9006C5EC2 /* DigiTrafficControl.swift in Sources */,
+				BC64C804260F836C006C5EC2 /* RoadView.swift in Sources */,
 				BC64C7F6260F6AD8006C5EC2 /* CameraData.swift in Sources */,
 				BC2CA0EF25FF8FC400CA0344 /* DigiTrafficData.swift in Sources */,
 				BC2CA0C225FF7D4100CA0344 /* ContentView.swift in Sources */,
+				BC64C821260F8E21006C5EC2 /* CameraView.swift in Sources */,
+				BC64C7FC260F827E006C5EC2 /* MunicipalityView.swift in Sources */,
+				BC64C80E260F8864006C5EC2 /* CityView.swift in Sources */,
 				BC2CA0C025FF7D4100CA0344 /* DigiTrafficApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
