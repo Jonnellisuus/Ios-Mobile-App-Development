@@ -10,8 +10,11 @@ import SwiftUI
 struct CityView: View {
     @EnvironmentObject var digiTrafficControl: DigiTrafficControl
     let municipality: String
+    
     var body: some View {
-        List(digiTrafficControl.road, id: \.self) { road in NavigationLink(destination: RoadView(roadView: road)) { Text(road)
+        List(digiTrafficControl.road, id: \.self) {
+            road in NavigationLink(destination: RoadView(roadView: road)) { Image("DigiTrafficIcon").resizable().frame(width: 30, height: 30)
+                Text(road)
             }
         }
         .onAppear() {

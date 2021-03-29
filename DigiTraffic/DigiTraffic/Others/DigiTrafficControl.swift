@@ -8,7 +8,6 @@
 import Foundation
 
 class DigiTrafficControl: ObservableObject {
-    
     @Published var digiTrafficData = [Feature]()
     @Published var cameraStations = [CameraStation]()
     

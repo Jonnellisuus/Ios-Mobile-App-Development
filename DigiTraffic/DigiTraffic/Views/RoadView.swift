@@ -12,8 +12,8 @@ struct RoadView: View {
     let roadView: String
     
     var body: some View {
-        List(digiTrafficControl.roads) { road in
-            NavigationLink(destination: CameraView(imageUrl: URL(string: road.imageUrl)!)) {
+        List(digiTrafficControl.roads) {
+            road in NavigationLink(destination: CameraView(imageUrl: URL(string: road.imageUrl)!)) { Image("DigiTrafficIcon").resizable().frame(width: 30, height: 30)
                 Text(road.presentationName ?? "404 name not found.")
             }
         }

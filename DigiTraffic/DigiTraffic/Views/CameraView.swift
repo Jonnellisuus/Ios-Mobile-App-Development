@@ -11,5 +11,6 @@ struct CameraView: View {
     let imageUrl: URL
     var body: some View {
         PlaceholderImage(url: imageUrl, placeholder: Text("Loading")).aspectRatio(contentMode: .fit)
+        Spacer()
     }
 }

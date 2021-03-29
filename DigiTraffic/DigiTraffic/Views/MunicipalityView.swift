@@ -10,8 +10,11 @@ import SwiftUI
 struct MunicipalityView: View {
     @EnvironmentObject var digiTrafficControl: DigiTrafficControl
     let province: String
+    
     var body: some View {
-        List (digiTrafficControl.municipalityArray, id: \.self) { municipality in NavigationLink(destination: CityView(municipality: municipality)) { Text(municipality)
+        List (digiTrafficControl.municipalityArray, id: \.self) {
+            municipality in NavigationLink(destination: CityView(municipality: municipality))  { Image("DigiTrafficIcon").resizable().frame(width: 30, height: 30)
+                Text(municipality)
             }
         }
         .onAppear() {

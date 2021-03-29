@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @EnvironmentObject var digiTrafficControl: DigiTrafficControl
     
     var body: some View {
+        Image("DigiTrafficIcon").resizable().frame(width: 100, height: 100)
         NavigationView {
             List{
-                ForEach(digiTrafficControl.provinceArray, id: \.self) { province in NavigationLink(destination: MunicipalityView(province: province)) { Text(province)
+                ForEach(digiTrafficControl.provinceArray, id: \.self) {
+                    province in NavigationLink(destination: MunicipalityView(province: province)) { Image("DigiTrafficIcon").resizable().frame(width: 30, height: 30)
+                        Text(province)
                     }
                 }
             }
