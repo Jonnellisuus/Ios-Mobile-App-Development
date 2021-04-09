@@ -11,7 +11,6 @@ struct ContentView: View {
     @EnvironmentObject var digiTrafficControl: DigiTrafficControl
     
     var body: some View {
-        Image("DigiTrafficIcon").resizable().frame(width: 70, height: 70)
         NavigationView {
             List{
                 ForEach(digiTrafficControl.provinceArray, id: \.self) {

@@ -22,6 +22,8 @@
 		BC64C813260F8BA6006C5EC2 /* PlaceholderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C812260F8BA6006C5EC2 /* PlaceholderImage.swift */; };
 		BC64C818260F8CB5006C5EC2 /* ImageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C817260F8CB5006C5EC2 /* ImageLoad.swift */; };
 		BC64C821260F8E21006C5EC2 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64C820260F8E21006C5EC2 /* CameraView.swift */; };
+		BC846C9126209239005B3978 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846C9026209239005B3978 /* AppView.swift */; };
+		BC846CC82620C5A9005B3978 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846CC72620C5A9005B3978 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		BC64C812260F8BA6006C5EC2 /* PlaceholderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImage.swift; sourceTree = "<group>"; };
 		BC64C817260F8CB5006C5EC2 /* ImageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoad.swift; sourceTree = "<group>"; };
 		BC64C820260F8E21006C5EC2 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BC846C9026209239005B3978 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		BC846CC72620C5A9005B3978 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				BC64C803260F836C006C5EC2 /* RoadView.swift */,
 				BC64C80D260F8864006C5EC2 /* CityView.swift */,
 				BC64C820260F8E21006C5EC2 /* CameraView.swift */,
+				BC846C9026209239005B3978 /* AppView.swift */,
+				BC846CC72620C5A9005B3978 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC846C9126209239005B3978 /* AppView.swift in Sources */,
 				BC64C818260F8CB5006C5EC2 /* ImageLoad.swift in Sources */,
 				BC64C813260F8BA6006C5EC2 /* PlaceholderImage.swift in Sources */,
 				BC64C7EE260F67D9006C5EC2 /* DigiTrafficControl.swift in Sources */,
 				BC64C804260F836C006C5EC2 /* RoadView.swift in Sources */,
+				BC846CC82620C5A9005B3978 /* InfoView.swift in Sources */,
 				BC64C7F6260F6AD8006C5EC2 /* CameraData.swift in Sources */,
 				BC2CA0EF25FF8FC400CA0344 /* DigiTrafficData.swift in Sources */,
 				BC2CA0C225FF7D4100CA0344 /* ContentView.swift in Sources */,

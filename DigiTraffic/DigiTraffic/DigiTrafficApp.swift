@@ -13,7 +13,7 @@ struct DigiTrafficApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(digiTrafficControl)
+            AppView().environmentObject(digiTrafficControl)
         }
     }
 }
